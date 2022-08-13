@@ -12,7 +12,7 @@ const routes = {
 export default {
   data() {
     return {
-      currentPath: window.location.pathname
+      currentPath: window.location.hash
     }
   },
   computed: {
@@ -22,7 +22,7 @@ export default {
   },
   mounted() {
     window.addEventListener('hashchange', () => {
-      this.currentPath = window.location.pathname
+      this.currentPath = window.location.hash
     })
   }
 }
@@ -40,10 +40,10 @@ export default {
           <a class="px-3 py-2 rounded-lg" href="/"> Spring </a>
         </li>
 
-        <li><a class="px-3 py-2 rounded-lg" href="train"> 训练计划 </a></li>
+        <li><a class="px-3 py-2 rounded-lg" href="#train"> 训练计划 </a></li>
 
         <li>
-          <a class="inline-flex items-center px-3 py-2 rounded-lg" href="about">
+          <a class="inline-flex items-center px-3 py-2 rounded-lg" href="#about">
             关于
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               class="ml-1.5 w-4 h-4">
