@@ -17,6 +17,7 @@
             <span class="text-gray-400 font-medium" v-else>{{
                     typeOptions.false
             }}</span>
+
         </div>
         <label class="text-gray-700" for="name">
             <textarea v-model="userInput" @change="springContent()"
@@ -57,7 +58,8 @@
 
             <div class="bg-white dark:bg-gray-800 w-full mx-auto p-8 my-5 rounded-lg">
 
-                <p class="text-gray-800 dark:text-white w-full mb-5 md:w-2/3 m-auto text-center  md:text-3xl text-xl font-extrabold">
+                <p
+                    class="text-gray-800 dark:text-white w-full mb-5 md:w-2/3 m-auto text-center  md:text-3xl text-xl font-extrabold">
                     <span class="font-bold text-indigo-500">｢</span>
                     {{ item.content }}
                     <span class="font-bold text-indigo-500">｣</span>
@@ -67,7 +69,7 @@
 
                     <div class="flex ml-2 items-center justify-center">
                         <span class="font-semibold text-indigo-500 mr-2 text-md">
-                            {{ item.author ? item.author : "无名氏" }}
+                            {{ item.author ? item.author : "一言" }}
                         </span>
                         <span class="text-gray-400 text-xl font-light">
                             -
@@ -99,8 +101,8 @@ export default {
         return {
             springType: true,
             typeOptions: {
-                true: "灌满",
-                false: "镜子",
+                true: "圆缺",
+                false: "影随",
             },
             loading: false,
             springData: null,
@@ -108,7 +110,7 @@ export default {
             tend: "",
             first: true,
             need: 10,
-            userInput:"",
+            userInput: "",
 
         };
     },

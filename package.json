@@ -1,7 +1,7 @@
 {
   "name": "spring",
   "private": true,
-  "version": "0.1.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,9 +12,10 @@
     "@antv/data-set": "^0.11.8",
     "@antv/g2": "^4.2.5",
     "@vueform/toggle": "^2.1.1",
-    "vue-axios": "^3.4.1",
     "axios": "^0.27.2",
-    "vue": "^3.2.37"
+    "daisyui": "^2.24.0",
+    "vue": "^3.2.37",
+    "vue-axios": "^3.4.1"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.0.0",
