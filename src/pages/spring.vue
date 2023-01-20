@@ -92,8 +92,7 @@ import DataSet from "@antv/data-set";
 import { Chart } from "@antv/g2";
 import axios from "axios";
 const { DataView } = DataSet;
-const api_similar = "https://springapi.hissin.cn/similar";
-const api_contrary = "https://springapi.hissin.cn/contrary";
+const apiUrl = "https://webapi-spring-iwfjnxhgbm.cn-shanghai.fcapp.run";
 
 export default {
     name: 'spring',
@@ -125,7 +124,7 @@ export default {
                 throw new Exception("Please enter a user input");
             }
             this.loading = true;
-            let url = this.springType ? api_contrary : api_similar;
+            let url = this.springType ? apiUrl+'/contrary' : apiUrl+'/similar';
             axios.post(url, {
                 sentence: this.userInput,
                 need: this.need

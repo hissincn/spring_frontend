@@ -169,10 +169,7 @@
 
 <script>
 import axios from "axios";
-const api_new = "https://springapi.hissin.cn/train/new";
-const api_update = "https://springapi.hissin.cn/train/update";
-const api_cancel = "https://springapi.hissin.cn/train/cancel";
-
+const apiUrl = "https://webapi-spring-iwfjnxhgbm.cn-shanghai.fcapp.run";
 
 export default {
     name: 'train',
@@ -187,7 +184,7 @@ export default {
     },
     methods: {
         getNew() {
-            axios.post(api_new, {})
+            axios.post(apiUrl+'/train/new', {})
                 .then((res) => {
                     this.raw = res.data.raw;
                     this.token = res.data.token;
@@ -198,7 +195,7 @@ export default {
                 })
         },
         refresh() {
-            axios.post(api_new, {})
+            axios.post(apiUrl+'/train/new', {})
                 .then((res) => {
                     this.raw = res.data.raw;
                     this.token = res.data.token;
@@ -208,7 +205,7 @@ export default {
                 })
         },
         pushResult() {
-            axios.post(api_update, {
+            axios.post(apiUrl+'/train/update', {
                 id: this.raw.id,
                 token: this.token,
                 emotion: this.result
@@ -225,7 +222,7 @@ export default {
                 })
         },
         cancel() {
-            axios.post(api_cancel, {
+            axios.post(apiUrl+'/train/cancel', {
                 id: this.raw.id,
                 token: this.token
             })
